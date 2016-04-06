@@ -1,0 +1,15 @@
+sudo: false
+
+language: Python
+
+python:
+- 2.7
+
+install:
+- pip install codecov
+
+script:
+- coverage run test_calculator.py
+
+after success:
+- codecov
